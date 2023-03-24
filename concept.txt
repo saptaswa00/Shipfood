@@ -1,0 +1,38 @@
+Callback: It is a function which we want to execute after a cetain time later or to execute any meaningfull operaton.
+Promise: It is a object tat keep on checking wheather order accepted or not , when restaurant eventually
+         responds(A/R) it'll tell us. 
+
+promise => then, catch     :  callback => resolve, reject
+
+//
+
+Types of promise..............
+
+1.  promise.all 
+    => Every operation got called parallaly, if one operation fails whole operation fails and will call for an error.
+
+2.  promise.allsettled 
+    => Here also every operation got called parallaly, but if one fails other operation won't effect
+
+3.  promise.race
+    => First promise to fullfilled wheather its resolved or rejected
+    => Ex: 1. Reject, 2. Reject, 3. Resolve 4. Reject........
+    => It'll return "Your Request is rejected" at 1st.....then after two itaration it'll show Resolve , cause 1st promise got rejected.
+
+4.  promise.any
+    => First operation/promise to fullfill when its resolved......won't return rjected one.
+    => Ex: 1. Reject, 2. Reject, 3. Resolve 4. Reject
+    => It'll return "Your Request is Resolve", cause its only fullfilled when resolved , so it'll take 3rd one as consideration.
+
+//
+
+ The primary difference between CALLBACK and PROMISE is .....
+
+ i. In callback we give fixed time for one itaration, 
+      i.e, we check after 5 sec wheather the work is done or not, 1 time only.
+ii. In promises we can do this process repeatedly, i.e we can itarate until we find the result,
+     Ex- we check after every 5 sec wheather the work is done or not until we get responce.
+
+//
+
+Pure function: Only has one work to do, only do that single work and stop.

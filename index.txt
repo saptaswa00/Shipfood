@@ -1,0 +1,31 @@
+Food Order Process:
+
+1. Customer placed the Order
+--> waits for Restaurants acceptence
+
+2. Restaurant accept it and start preparin it.
+--> 1> If Restaurant accept the order: Start preparing & Find the valet(Delivery Agent).
+    2> If not accepted: Return Payment
+
+3. Start Preparing && Company assign a delivery partner / Find Nearby valet.
+--> find delivery boy based on...
+     i> Going to the same path
+     ii> Located in nearest distance 
+
+4. Delivery partner reached Restaurant.
+--> Check after every 1 min wheather delivery boy Picked up the order or not.
+
+5. Picked up the order. 
+--> If not picked up: Update estimated time i.e , increase time by 2 min.
+--> If picked it up: Get estimated delivery time from map api, and update the estimated time.
+--> Uodate delivery location and time after every 1 min.
+
+6. Delevered it.
+--> After receving the order : Give feedback and ratings.
+
+>>>> How swiggy, zomato, uber eats etc. assign their valets:
+
+    1. Gets all the locations of nearby valets
+    2. Sort the valets based on shorest path of restaurant to destination.
+    3.Select valet with sortest distance & minimum orders.
+
